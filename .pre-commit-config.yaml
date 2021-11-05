@@ -1,0 +1,29 @@
+exclude: (tests/)|(\.(git|idea)) # 用"正则"跳过某些文件的代码规范校验，通常来说.gitignore里面的文件需要在这个正则里面
+# repos:
+#-   repo: https://github.com/psf/black
+#    rev: 21.10b0
+#    hooks:
+#    -   id: black
+#-   repo: https://github.com/pre-commit/pre-commit-hooks
+#    rev: v2.3.0
+#    hooks:
+#    -   id: check-yaml
+#    -   id: check-json
+#    -   id: check-xml
+#    -   id: check-toml
+#    -   id: check-ast
+#    -   id: end-of-file-fixer
+#    -   id: trailing-whitespace
+#    -   id: requirements-txt-fixer
+#    -   id: check-added-large-files
+#        args: ['--maxkb=5120']
+#-   repo: https://github.com/asottile/reorder_python_imports
+#    rev: v2.6.0
+#    hooks:
+#    -   id: reorder-python-imports
+#        args: [--py3-plus]
+-   repo: https://github.com/pycqa/flake8
+    rev: 4.0.1
+    hooks:
+    -   id: flake8
+        args: ['--config=.flake8']
